@@ -4,7 +4,7 @@ development:
       host: localhost
       adapter: mysql
       database: fedena_ultimate
-      port: 3306
+      port: 5432
       username: root
 
 
@@ -16,7 +16,7 @@ test: &test
       host: localhost
       adapter: mysql
       database: fedena_two_new
-      port: 3306
+      port: 5432
       username: root
       password: root
 
@@ -24,7 +24,7 @@ production:
       host: localhost
       adapter: mysql
       database: fedena_ultimate
-      port: 3306
+      port: 5432
       username: root
       password: root
 cucumber:
