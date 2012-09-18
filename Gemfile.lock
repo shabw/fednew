@@ -61,7 +61,7 @@ DEPENDENCIES
   minitest (~> 2.1)
   mysql
   paperclip
-  pg
+  pg (= 0.14.1)
   rack (= 1.0.1)
   rails (~> 2.3.5)
   rake (~> 0.8.7)
