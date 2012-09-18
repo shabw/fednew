@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :attendances
   map.resources :employee_attendances
   map.resources :attendance_reports
-
+map.feed 'student/admission1', :controller => 'student' ,:action=>'admission1'
   map.feed 'courses/manage_course', :controller => 'courses' ,:action=>'manage_course'
   map.feed 'courses/manage_batches', :controller => 'courses' ,:action=>'manage_batches'
   map.resources :courses, :has_many => :batches
@@ -26,7 +26,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.root :controller => 'user', :action => 'login'
-map.root :controller => 'student', :action => 'admission1'
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id/:id2'
   map.connect ':controller/:action/:id.:format'
