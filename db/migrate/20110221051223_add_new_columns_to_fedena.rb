@@ -13,7 +13,7 @@ class AddNewColumnsToFedena < ActiveRecord::Migration
     change_column :finance_transactions, :amount, :decimal, :precision =>15, :scale => 2
     add_column :finance_transactions, :transaction_date, :date
     add_column :finance_transactions, :fine_amount, :decimal, :default =>0
-    add_column :finance_transactions, :master_transaction_id, :decimal, :default =>'false'
+    #add_column :finance_transactions, :master_transaction_id, :decimal, :default =>'false'
     #add_column :finance_transactions, :user_id, :integer
     change_column :finance_donations, :amount, :decimal, :precision =>15, :scale => 2
     add_column :finance_donations, :transaction_date, :date
@@ -32,7 +32,7 @@ class AddNewColumnsToFedena < ActiveRecord::Migration
     remove_column :employee_leave_types, :carry_forward
     remove_column :finance_transactions, :transaction_date
     remove_column :finance_transactions, :fine_amount
-   remove_column :finance_transactions, :master_transaction_id
+   #remove_column :finance_transactions, :master_transaction_id
 
     remove_column :finance_donations, :transaction_date
   end
