@@ -26,7 +26,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.root :controller => 'user', :action => 'login'
-
+map.root :controller => 'student', :action => 'admission1'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id/:id2'
   map.connect ':controller/:action/:id.:format'
