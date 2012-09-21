@@ -28,7 +28,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.14.1)
     rack (1.0.1)
     rails (2.3.5)
       actionmailer (= 2.3.5)
@@ -61,7 +60,6 @@ DEPENDENCIES
   minitest (~> 2.1)
   mysql
   paperclip
-  pg (= 0.14.1)
   rack (= 1.0.1)
   rails (~> 2.3.5)
   rake (~> 0.8.7)

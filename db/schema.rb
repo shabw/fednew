@@ -268,7 +268,7 @@ ActiveRecord::Schema.define(:version => 20111105052819) do
     t.boolean "is_break"
   end
 
-  add_index "class_timings", ["batch_id", "start_time", "end_time"], :name => "index_class_timings_on_batch_id_and_start_time_and_end_time", :limit => {"batch_id"=>nil, "start_time"=>nil, "end_time"=>nil}
+  add_index "class_timings", ["batch_id", "start_time", "end_time"], :name => "index_class_timings_on_batch_id_and_start_time_and_end_time", :limit => {"batch_id"=>nil, "end_time"=>nil, "start_time"=>nil}
 
   create_table "configurations", :force => true do |t|
     t.string "config_key"
@@ -460,7 +460,7 @@ ActiveRecord::Schema.define(:version => 20111105052819) do
     t.string   "origin_type"
   end
 
-  add_index "events", ["is_common", "is_holiday", "is_exam"], :name => "index_events_on_is_common_and_is_holiday_and_is_exam", :limit => {"is_common"=>nil, "is_holiday"=>nil, "is_exam"=>nil}
+  add_index "events", ["is_common", "is_holiday", "is_exam"], :name => "index_events_on_is_common_and_is_holiday_and_is_exam", :limit => {"is_common"=>nil, "is_exam"=>nil, "is_holiday"=>nil}
 
   create_table "exam_groups", :force => true do |t|
     t.string  "name"
@@ -643,7 +643,7 @@ ActiveRecord::Schema.define(:version => 20111105052819) do
     t.datetime "updated_at"
   end
 
-  add_index "grading_levels", ["batch_id", "is_deleted"], :name => "index_grading_levels_on_batch_id_and_is_deleted", :limit => {"batch_id"=>nil, "is_deleted"=>nil}
+  add_index "grading_levels", ["batch_id", "is_deleted"], :name => "index_grading_levels_on_batch_id_and_is_deleted", :limit => {"is_deleted"=>nil, "batch_id"=>nil}
 
   create_table "grouped_exams", :force => true do |t|
     t.integer "exam_group_id"
@@ -848,7 +848,7 @@ ActiveRecord::Schema.define(:version => 20111105052819) do
   end
 
   add_index "students", ["admission_no"], :name => "index_students_on_admission_no", :limit => {"admission_no"=>"10"}
-  add_index "students", ["first_name", "middle_name", "last_name"], :name => "index_students_on_first_name_and_middle_name_and_last_name", :limit => {"middle_name"=>"10", "first_name"=>"10", "last_name"=>"10"}
+  add_index "students", ["first_name", "middle_name", "last_name"], :name => "index_students_on_first_name_and_middle_name_and_last_name", :limit => {"last_name"=>"10", "first_name"=>"10", "middle_name"=>"10"}
 
   create_table "students_subjects", :force => true do |t|
     t.integer "student_id"
@@ -870,7 +870,7 @@ ActiveRecord::Schema.define(:version => 20111105052819) do
     t.datetime "updated_at"
   end
 
-  add_index "subjects", ["batch_id", "elective_group_id", "is_deleted"], :name => "index_subjects_on_batch_id_and_elective_group_id_and_is_deleted", :limit => {"batch_id"=>nil, "elective_group_id"=>nil, "is_deleted"=>nil}
+  add_index "subjects", ["batch_id", "elective_group_id", "is_deleted"], :name => "index_subjects_on_batch_id_and_elective_group_id_and_is_deleted", :limit => {"is_deleted"=>nil, "batch_id"=>nil, "elective_group_id"=>nil}
 
   create_table "timetable_entries", :force => true do |t|
     t.integer "batch_id"
@@ -880,7 +880,7 @@ ActiveRecord::Schema.define(:version => 20111105052819) do
     t.integer "employee_id"
   end
 
-  add_index "timetable_entries", ["weekday_id", "batch_id", "class_timing_id"], :name => "by_timetable", :limit => {"class_timing_id"=>nil, "batch_id"=>nil, "weekday_id"=>nil}
+  add_index "timetable_entries", ["weekday_id", "batch_id", "class_timing_id"], :name => "by_timetable", :limit => {"weekday_id"=>nil, "class_timing_id"=>nil, "batch_id"=>nil}
 
   create_table "user_events", :force => true do |t|
     t.integer  "event_id"
