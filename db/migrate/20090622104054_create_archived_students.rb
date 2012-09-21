@@ -35,11 +35,11 @@ class CreateArchivedStudents < ActiveRecord::Migration
       t.binary     :photo_data
 
       t.string     :status_description
-      t.boolean    :is_active, :default => 'true'
-      t.boolean    :is_deleted, :default => 'false'
+      t.boolean    :is_active, :default => true
+      t.boolean    :is_deleted, :default => false
 
       t.references :immediate_contact
-      t.boolean    :is_sms_enabled, :default=>'true'
+      t.boolean    :is_sms_enabled, :default=>true
       t.string :former_id
 
       t.timestamps

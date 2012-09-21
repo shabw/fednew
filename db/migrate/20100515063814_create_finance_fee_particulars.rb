@@ -8,7 +8,7 @@ class CreateFinanceFeeParticulars < ActiveRecord::Migration
       t.references  :student_category
       t.string      :admission_no
       t.references  :student
-      t.boolean     :is_deleted, :null => 'false', :default => 'false'
+      t.boolean     :is_deleted, :null => false, :default => false
       t.timestamps
     end
   end

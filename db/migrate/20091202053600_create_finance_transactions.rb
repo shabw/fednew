@@ -4,7 +4,7 @@ class CreateFinanceTransactions < ActiveRecord::Migration
       t.string     :title
       t.string     :description
       t.decimal    :amount, :precision =>15, :scale => 2
-      t.boolean    :fine_included, :default => 'false'
+      t.boolean    :fine_included, :default => false
       t.references :category
       t.references :student
       t.references :finance_fees

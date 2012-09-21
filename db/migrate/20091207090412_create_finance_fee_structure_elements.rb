@@ -8,7 +8,7 @@ class CreateFinanceFeeStructureElements < ActiveRecord::Migration
       t.references :student
       t.references :parent
       t.references :fee_collection
-      t.boolean    :deleted, :default => 'false'
+      t.boolean    :deleted, :default => false
     end
   end
 

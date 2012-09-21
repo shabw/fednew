@@ -5,7 +5,7 @@ class CreateGradingLevels < ActiveRecord::Migration
       t.references :batch
       t.integer    :min_score
       t.integer    :order
-      t.boolean    :is_deleted, :default => 'false'
+      t.boolean    :is_deleted, :default => false
       t.timestamps
     end
       create_default

@@ -5,8 +5,8 @@ class CreateFinanceFeeCategories < ActiveRecord::Migration
       t.text        :description
       t.references  :batch
     # t.references  :fee_collection
-      t.boolean     :is_deleted , :null => 'false' ,:default => 'false'
-      t.boolean     :is_master, :null => 'false' ,:default => 'false'
+      t.boolean     :is_deleted , :null => false ,:default => false
+      t.boolean     :is_master, :null => false ,:default => false
       t.timestamps
     end
   end

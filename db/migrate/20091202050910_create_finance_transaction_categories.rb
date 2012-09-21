@@ -4,7 +4,7 @@ class CreateFinanceTransactionCategories < ActiveRecord::Migration
       t.string  :name
       t.string  :description
       t.boolean :is_income
-      t.boolean :deleted, :null => 'false', :default => 'false'
+      t.boolean :deleted, :null => false, :default => false
     end
     create_defaults
   end
@@ -14,8 +14,8 @@ class CreateFinanceTransactionCategories < ActiveRecord::Migration
   end
 
   def self.create_defaults
-    FinanceTransactionCategory.create(:name => 'Salary', :description => ' ', :is_income => 'false')
-    FinanceTransactionCategory.create(:name => 'Donation', :description => ' ', :is_income => 'true')
-    FinanceTransactionCategory.create(:name => 'Fee', :description => ' ', :is_income => 'true')
+    FinanceTransactionCategory.create(:name => 'Salary', :description => ' ', :is_income => false)
+    FinanceTransactionCategory.create(:name => 'Donation', :description => ' ', :is_income => true)
+    FinanceTransactionCategory.create(:name => 'Fee', :description => ' ', :is_income => true)
   end
 end

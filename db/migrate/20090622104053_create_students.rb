@@ -31,14 +31,14 @@ class CreateStudents < ActiveRecord::Migration
       t.string     :email
 
       t.references :immediate_contact
-      t.boolean    :is_sms_enabled, :default=>'true'
+      t.boolean    :is_sms_enabled, :default=>true
 
       t.string     :photo_filename
       t.string     :photo_content_type
       t.binary     :photo_data
       t.string     :status_description
-      t.boolean    :is_active, :default => 'true'
-      t.boolean    :is_deleted, :default => 'false'
+      t.boolean    :is_active, :default => true
+      t.boolean    :is_deleted, :default => false
 
       t.timestamps
     end
@@ -47,7 +47,7 @@ class CreateStudents < ActiveRecord::Migration
 
     create_table :student_categories do |t|
       t.string  :name
-      t.boolean :is_deleted, :default=> 'false'
+      t.boolean :is_deleted, :default=> false
     end
   end
 
