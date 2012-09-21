@@ -53,7 +53,8 @@ class CreateEmployees < ActiveRecord::Migration
 
       t.column   :photo_filename,       :string
       t.column   :photo_content_type,   :string
-      t.column   :photo_data,           :binary
+      t.column   :photo_data,           :binary,
+        :limit => 5.megabytes
 
       t.timestamps
     end
@@ -69,7 +70,7 @@ class CreateEmployees < ActiveRecord::Migration
     def self.create_default
      Employee.create :employee_number => 'admin',:joining_date => Date.today,:first_name => 'Fedena',:last_name => 'Administrator',
        :employee_department_id => 1,:employee_grade_id => 1,:employee_position_id => 1,:employee_category_id => 1,:status => true,:nationality_id =>'76', :date_of_birth => Date.today-365
-     execute "UPDATE users SET admin='t',employee='f' where id = 1"
+     execute "UPDATE users SET admin=1,employee=0 where id = 1"
     end
 
 end
