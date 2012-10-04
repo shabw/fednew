@@ -24,7 +24,7 @@ gem "will_paginate", "2.3.12"
 gem "hoe","1.5.1"
 
 group :production do
-gem "pg","0.14.1"
+#gem "pg","0.14.1"
 end
 group :development do
 gem "minitest", "~> 2.1"

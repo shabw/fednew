@@ -3,7 +3,7 @@
 development:
       host: localhost
       adapter: mysql
-      database: fedena_development
+      database: Brilliance_development
       port: 3306
       username: root
 
@@ -15,7 +15,7 @@ development:
 test: &test
       host: localhost
       adapter: mysql
-      database: fedena_test
+      database: Brilliance_test
       port: 3306
       username: root
       password: root
@@ -23,7 +23,7 @@ test: &test
 production:
       host: localhost
       adapter: mysql
-      database: fedena_production
+      database: Brilliance_production
       port: 3306
       username: root
       password: root

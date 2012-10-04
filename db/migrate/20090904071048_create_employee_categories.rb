@@ -13,6 +13,6 @@ class CreateEmployeeCategories < ActiveRecord::Migration
   end
 
    def self.create_default
-     EmployeeCategory.create :name => 'Fedena Admin',:prefix => 'Admin',:status => true
+     EmployeeCategory.create :name => 'Brilliance-works Admin',:prefix => 'Admin',:status => true
   end
 end
